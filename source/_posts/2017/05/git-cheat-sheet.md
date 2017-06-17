@@ -8,6 +8,17 @@ tags:
     - cheatsheet
 ---
 
+#### Git config
+1. Tạo ssh key 
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+2. Cấu hình user và email
+```
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+```
+
 | Command| Chức năng| Lưu ý|
 | ---| ---| ---|
 |`git clone path-to-repository`| Tạo clone của một repository lên thư mục đang đứng| Nên config ssh key cho để sử dụng git thuận tiện hơn|
