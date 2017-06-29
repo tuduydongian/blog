@@ -12,8 +12,6 @@ cp .travis/ssh_config ~/.ssh/config
 # Set Git config
 git config --global user.name "TDDG Bot"
 git config --global user.email bot@tuduydongian.com
-# Copy prod config
-cp _config.prod.yml _config.yml
 # Clone the repository
 git clone git@github.com:tuduydongian/tuduydongian.github.io.git .deploy_git
 # Deploy to GitHub

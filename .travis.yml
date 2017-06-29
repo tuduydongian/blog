@@ -22,6 +22,7 @@ addons:
   ssh_known_hosts: github.com
 
 script:
+  - cp _config.prod.yml _config.yml
   - npm run build
 
 deploy:
