@@ -72,4 +72,4 @@ deploy:
   repo: git@github.com:tuduydongian/tuduydongian.github.io.git
 
 # tracking
-google_analytics: 
+google_analytics: UA-100038903-1
