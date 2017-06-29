@@ -42,3 +42,6 @@
   </div>
 </section>
 <% } %>
+<% if (!index && post.comments && config.facebook_comments.enable){ %>
+  <%- partial('_partial/facebook-comments') %>
+<% } %>
