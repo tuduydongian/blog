@@ -73,3 +73,7 @@ deploy:
 
 # tracking
 google_analytics: 
+facebook_comments: 
+  enable: false
+  appId: 
+  numposts: 10
