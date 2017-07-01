@@ -71,9 +71,13 @@ deploy:
   type: git
   repo: git@github.com:tuduydongian/tuduydongian.github.io.git
 
-# tracking
+# integration
 google_analytics: 
-facebook_comments: 
-  enable: false
+facebook: 
   appId: 
-  numposts: 10
+  admins: 
+  comments: 
+    enable: false
+    numposts: 10
+twitter: 
+google_plus: 
