@@ -1,12 +1,13 @@
 ---
 title:      Ansible - tips and tricks
 date:       2017-05-29
-summary:    Vài tips và trick nhỏ nhỏ để tăng độ sướng khi dùng ansible
 categories: devops
 tags: 
   - tips
   - ansible
 ---
+Vài tips và trick nhỏ nhỏ để tăng độ sướng khi dùng ansible
+<!--more -->
 ### Deal with known hosts  
 Thỉnh thoảng anh em sẽ thấy vài task ansible (ví dụ clone git, rsync...) đứng hình. Đơn giản là nó đòi xác thực cái server đang connect đến.  
 Có option trong ansible để disable check known host nhưng có 1 cách đơn giản hơn là làm 1 cái task, server nào của mình thì tự fetch và add known host vào. 
