@@ -216,4 +216,4 @@ Các bạn có thể tham khảo thêm tại:
 - [Danh sách các plugins](https://webpack.js.org/plugins/)
 
 P/s: chờ sang tháng mình sẽ làm tiếp 1 bài về cấu hình nâng cao cho webpack nhé <3 
-Toàn bộ mã nguồn của bài viết này có thể xem tại: [webpack starter](https://github.com/tuduydongian/webpack-starter)
+Toàn bộ mã nguồn của bài viết này có thể xem tại: [webpack starter](https://github.com/tuduydongian/webpack-starter/tree/webpack-simple-1)
