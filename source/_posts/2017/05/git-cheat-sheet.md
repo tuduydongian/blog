@@ -1,13 +1,13 @@
 ---
 title:      Git cheat sheet for beginer
 date:       2017-05-28
-summary:    Các lệnh git cần nhớ để khỏi ăn hành với git
 categories: tools
 tags: 
     - git 
     - cheatsheet
 ---
-
+Các lệnh git cần nhớ để khỏi ăn hành với git
+<!-- more -->
 #### Git configuration
 1. Tạo ssh key 
 ```bash
