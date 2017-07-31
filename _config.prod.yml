@@ -72,7 +72,7 @@ deploy:
   repo: git@github.com:tuduydongian/tuduydongian.github.io.git
 
 # integration
-google_analytics: 
+google_analytics: UA-100038903-1
 facebook: 
   appId: 124307384811590
   admins: 100000290423290
