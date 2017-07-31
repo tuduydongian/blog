@@ -30,7 +30,7 @@ dàng hơn bao giờ hết.Git là một trong nhũng tool thần thành ấy. S
 - Pull là kéo toàn bộ code của remote repository về local repository.
 - Push là đẩy những code đã commit ở local repository lên branch hiện tại ở trên remote server.
 
-#### 3. Enguys git workflow
+#### 3. Bespokify git workflow
 Bước 1: Clone project về local bằng command : `git clone địa_chỉ_repository`
 
 Bước 2: Để thêm một tính năng mới hay fix bug, ta checkout ra 1 branch mới bằng command `git checkout -b tên_branch`.
