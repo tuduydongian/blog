@@ -48,6 +48,12 @@ $ git commit -m "vừa làm gì thì viết vào"
 $ git reset HEAD~
 ```
 
+- Commit sử dụng tên tuổi người khác 
+```
+$ git commit -am "message có tâm" --author="Victim <vic@tim.com>"
+```
+**Tips**: nên thông báo cho khổ chủ trước, hạn chế sử dụng để tránh đổ vỡ tình anh em về sau. 
+
 - Đẩy toàn bộ file đang dở tay sửa vào stash  
 ```
 $ git stash 
@@ -88,6 +94,11 @@ $ git reset --hard
 ```
 **Tips**: cực kỳ cẩn thận khi gõ. Chỉ dùng khi muốn xoá hết làm lại từ đầu.  
 
+- Xoá tất cả branches ở local mà đã được merge vào master 
+```
+$ git branch --merged >/tmp/merged-branches && vi /tmp/merged-branches && xargs git branch -d </tmp/merged-branches
+```
+**Tips**: cái này có thể sẽ xoá cả master ở local. Khi editor hiển thị ra muốn giữ không xoá branch nào thì sửa.  
 
 | Command| Chức năng| Lưu ý|
 | ---| ---| ---|
