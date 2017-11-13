@@ -36,6 +36,13 @@ $ ssh root@localhost -p 2022
 $ dig google.com +trace 
 ```
 
+##### Generate nginx password 
+```bash
+# thay sammy bằng username muốn tạo 
+$ sudo sh -c "echo -n 'sammy:' >> /etc/nginx/.htpasswd"
+$ sudo sh -c "openssl passwd -apr1 >> /etc/nginx/.htpasswd"
+```
+
 #### Mysql 
 ##### Backup 1 database 
 ```
