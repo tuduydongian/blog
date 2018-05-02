@@ -1,9 +1,9 @@
 ---
 title:      Async thật đơn giản
 date:       2017-07-30
-categories: js, 
+categories: javascript
 tags:
-    - git
+    - async
 ---
 Trong 3 tháng trở lại đây, Dzung tay to, một trong những back-end programer khét tiếng về độ bựa và độ vi diệu 
 trong những dòng code mà hắn viết ra đã chân ướt chân ráo vào lãnh địa front-end đầy vi diệu. Với Dzung, back-end
