@@ -1,10 +1,10 @@
 ---
 title: Tìm hiểu vue thông qua xây dựng ứng dụng to do list (Part 1)
-date: 2017-31-01
-categories: javascript
+date: 2017-01-31
+categories: frontend
 tags: 
   - vuejs
-  - frontend
+  - javascript
 ---
 
 Bài viết này, Dzung chọn viết về **Vue**, một trong những framework nổi tiếng nhất hiện nay(cùng với Angular, React). Vậy, hãy cùng Dzung học về những khái niệm cơ bản trong **vue** thông qua việc xây dựng ứng dụng to do list nhé.
