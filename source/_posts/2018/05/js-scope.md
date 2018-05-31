@@ -21,6 +21,24 @@ Quan sát ví dụ trên, ở đây ta có 3 nested scopes.
 Scope 3, được tạo ra bởi function bar, nó nằm hoàn toàn trong scope 2, tạo bởi function foo, bởi lý do duy nhất là function bar được định nghĩa ở trong function foo.
 
 Khi Engine thực thi câu lệnh console.log(...), nó sẽ tìm kiếm tham chiếu đến 3 biến là a, b và c. Engine sẽ theo thứ tự các scope từ trong ra ngoài, bắt đầu từ scope gần nhất, tức là scope 3, và dừng tìm kiếm khi tìm được biến đầu tiên thỏa mãn. Trong ví dụ trên, Engine sẽ tìm thấy c ở scope 3, b ở scope 2, và a ở scope 1.
+
+Để hiểu hơn về lexcial scope, ta sẽ so sánh sự khác nhau giữa nó với một mô hình khác là dynamic scope.
+
+```javascript
+function foo() {
+	console.log(a); // 2
+}
+function bar() {
+	var a = 3;
+	foo();
+}
+var a = 2;
+bar();
+```
+
+Ở ví dụ trên, theo nguyên tắc của lexical scope, câu lệnh console.log(a) sẽ tìm tham chiếu đến biến a ở trong scope của function foo, vì không tìm thấy, nó tiếp tục tìm ở scope bên ngoài là global scope, kết quả ta có giá trị của a là 2.
+
+Nếu javascript sử dụng mô hình dynamic scope thay vì lexical scope, câu lệnh trên sẽ hiển thị giá trị 3. Bởi vì khác với lexcial scope xác định dựa trên quá trình khai báo, dynamic scope sẽ chỉ xem xét function foo được gọi từ đâu, như ở ví dụ trên foo được gọi từ bar, và trong scope của bar thì a có giá trị là 3.
 ## Function và Block Scope
 ### Function Scope
 Trong ví dụ đầu bài, ta thấy scope được tạo ra bởi function, mỗi function tạo ra một scope của chính nó. Cùng xem xét ví dụ tiếp theo:
@@ -101,5 +119,25 @@ Từ câu trả lời ở ví dụ trên, ta dễ dàng đoán được kết qu
 Câu lệnh var a = 2; thực tế sẽ được chia thành 2 phần: var a; và a = 2;. Phần đầu tiên là câu lệnh khởi tạo biến a sẽ được đưa lên thực hiện trước, phần còn lại là câu lệnh gán sẽ thực hiện theo thứ tự thông thường, tức là sau câu lệnh console.log(), bởi vậy ta có kết quả là undefined.
 
 Hiểu một cách đơn giản, hoisting là đưa các khai báo biến và hàm lên thực thi đầu tiên. Ngoài ra, cũng cần lưu ý thêm rằng hoisting chỉ xảy ra trong phạm vi của scope hiện tại.
+##Closure
+Closure được định nghĩa là khả năng function nhớ và truy cập được vào lexical scope của nó kể cả khi function được thực thi ở ngoài lexical scope đó.
+
+Cùng xem xét ví dụ sau:
+
+```javascript
+function foo() {
+    var a = 2;
+    function bar() {
+        console.log(a);
+    }
+    return bar
+}
+var baz = foo()
+baz()
+```
+
+Ở ví dụ trên, khi thực thi, function foo trả về một function object, chính là tham chiếu đến function bar, ta gán nó vào biến baz. Thực thi function baz thực chất là gọi đến function bar, ta thấy rằng bar được thực thi ở ngoài lexcial scope mà nó được khai báo.
+
+Sau khi foo được thực thi, thông thường toàn bộ scope bên trong foo được xóa bỏ để tránh lãng phí bộ nhớ, bởi function foo không còn được sử dụng. Tuy nhiên closure ngăn điều này xảy ra. Bởi bar có lexical scope vượt ra ngoài scope của foo, và vì bar vẫn còn sử dụng nên scope này vẫn được giữ và bar có thể tham chiếu đến bất cứ lúc nào. Khả năng tham chiếu này chính là closure.
 
 Scope là khái niệm nền tảng quan trọng trong javascript, cũng như rất cần thiết để ta tiếp cận các chủ đề nâng cao hơn. Qua bài viết hy vọng các bạn hiểu hơn về scope và các khái niệm xung quanh nó.
